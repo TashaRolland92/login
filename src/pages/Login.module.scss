@@ -1,0 +1,59 @@
+@use "/src/styles/base/variables" as *;
+@use "/src/styles/base/mixins" as *;
+
+.grid{
+    display: grid;   
+}
+
+.login_container{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heading {
+    font-size: 4em;
+    color: $primary;
+    margin: 20px 0;
+}
+
+.highlight{
+    display: block;
+    color: $secondary;
+    background: linear-gradient(179deg, #38ada8, #6d38ad);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;    
+}
+
+.reset{
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    margin-top: 20px;
+    background: none;
+    text-align: left;
+    color: $secondary-light;
+ 
+    &:hover{
+        text-decoration: underline;
+    }    
+}
+
+p{
+    font-size: 1.4em;
+    color: $secondary-on;
+
+    button{
+        border: 0;
+        padding: 0;
+        font-size: 1em;
+        cursor: pointer;
+        background: none;
+        color: $secondary-light;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

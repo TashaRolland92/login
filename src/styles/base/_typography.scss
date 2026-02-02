@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+$font-primary: 'Roboto', sans-serif;
+$font-style-italic: italic;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold: 700;
+$font-weight-bolder: 900;
+
+// Global Font Classes
+.font-regular {
+    font-family: $font-primary;
+    font-weight: $font-weight-regular;
+}
+
+.font-style-italic {
+    font-style: italic;
+}
+
+.font-medium {
+    font-family: $font-primary;
+    font-weight: $font-weight-medium;
+}
+
+.font-bold {
+    font-family: $font-primary;
+    font-weight: $font-weight-bold;
+}
+
+.font-bolder {
+    font-family: $font-primary;
+    font-weight: $font-weight-bolder;
+}

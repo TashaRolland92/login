@@ -1,0 +1,23 @@
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+@use "../base/typography" as *;
+
+body {
+    margin: 0;
+    font-size: 10px;
+    box-sizing: border-box;
+    font-family: $font-primary;
+    background-color: $primary-copy;
+}
+
+.block {
+    display: block;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+}
