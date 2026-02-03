@@ -8,27 +8,27 @@ import ResetPassword from "../components/reset-password/ResetPassword";
 
 type Mode = "login" | "signup";
 
-const Login = () => {
+const Login = (): React.ReactElement => { // Component return type annotated here, React.ReactElement covers specifically JSX elements
 
 	const [mode, setMode] = useState<Mode>("login"); // Strongly typed state so only login or signup are allowed as values
 	const [isResetPasswordOpen, setIsResetPasswordOpen] = useState<boolean>(false); // Explicitly typed as a boolean here for type safety
 
-	const handleSignUpClick = () => {
+	const handleSignUpClick = (_e: React.MouseEvent<HTMLButtonElement>): void => { // Annotated all event handlers as (): void return type because the function does not return anything		
 		setMode("signup");
 	}
-
-	const handleSignInClick = () => {
+	
+	const handleSignInClick = (_e: React.MouseEvent<HTMLButtonElement>): void => { // Parameter types added for event and element --> Type Annotation
 		setMode("login");
 	}
 
-	const handleResetPassword = () => {
+	const handleResetPassword = (_e: React.MouseEvent<HTMLButtonElement>): void => { // Naming the parameter with underscore (_e) tells the linter/compiler we are aware of this event but we are intentionally ignoring it
 		setIsResetPasswordOpen(true);
 	}
 
 	return (
-		<>		
+		<>
 			<LoginHero />
-			<div className={container.container}>		
+			<div className={container.container}>
 				<div className={form.form_grid}>
 					<div className={form.form_wrapper}>
 						<h1 className={`${styles.heading} font-regular`}>
@@ -38,33 +38,33 @@ const Login = () => {
 							}
 						</h1>
 						<form action="/login" method="post" className={form.form}>
-							<input 
-								type="email" 
-								name="email" 
-								id="email" 
+							<input
+								type="email"
+								name="email"
+								id="email"
 								autoComplete="email"
-								placeholder="Email Address" 
-								className={`${form.input} font-bold`} 
+								placeholder="Email Address"
+								className={`${form.input} font-bold`}
 							/>
-							<input 
-								type="password" 
-								name="password" 
+							<input
+								type="password"
+								name="password"
 								id="password"
-								placeholder="Password" 
-								className={`${form.input} font-bold`} 
+								placeholder="Password"
+								className={`${form.input} font-bold`}
 							/>
-							{(mode === "signup") && 
-								<input 
-									type="password" 
+							{(mode === "signup") &&
+								<input
+									type="password"
 									name="confirmPassword"
 									placeholder="Confirm Password"
-									className={`${form.input} font-bold`} 
+									className={`${form.input} font-bold`}
 								/>
-							} 
-								
+							}
+
 							<button title={(mode === "signup") ? "Sign up" : "Log in"} type="submit" className={`${form.submit_btn} font-medium`}>{(mode === "signup") ? "Sign up" : "Log in"}</button>
 						</form>
-						
+
 						{(mode === "login") &&
 							<>
 								<button type="button" onClick={handleResetPassword} className={styles.reset}>Reset Password?</button>
@@ -73,7 +73,7 @@ const Login = () => {
 						}
 
 						<p className="font-style-italic">
-							{(mode === "signup") 
+							{(mode === "signup")
 								? <>Already have an account? <button className="" type="button" onClick={handleSignInClick}>Sign in here</button></>
 								: <>Don't have an account? <button type="button" onClick={handleSignUpClick}>Sign up here</button></>
 							}
