@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 $font-primary: 'Roboto', sans-serif;
-$font-style-italic: italic;
+$font-italic: italic;
 $font-weight-regular: 400;
 $font-weight-medium: 500;
 $font-weight-bold: 700;
@@ -13,7 +13,7 @@ $font-weight-bolder: 900;
     font-weight: $font-weight-regular;
 }
 
-.font-style-italic {
+.font-italic {
     font-style: italic;
 }
 
