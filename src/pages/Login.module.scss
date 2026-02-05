@@ -14,7 +14,7 @@
 .heading {
     font-size: 4em;
     color: $primary;
-    margin: 20px 0;
+    margin: 0 0 20px;
 }
 
 .highlight{
@@ -55,5 +55,16 @@ p{
         &:hover{
             text-decoration: underline;
         }
+    }
+}
+
+.message{
+    
+    .success{
+        color: $success;
+    }
+
+    .error{
+        color: $error;
     }
 }

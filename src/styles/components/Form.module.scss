@@ -12,6 +12,10 @@
 }
 
 .form_wrapper{
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid $primary;
+
     @include breakpoint($mobile) {
         grid-column: 2;
     }

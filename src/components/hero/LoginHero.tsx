@@ -2,7 +2,7 @@ import styles from "./LoginHero.module.scss";
 import Image480 from "../../assets/images/image_480w.webp";
 import Image1200 from "../../assets/images/image_1200w1.webp";
 
-function LoginHero() {
+const LoginHero = (): React.ReactElement => {
     return (
         <section className={styles.hero}>
             <img

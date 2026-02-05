@@ -1,7 +1,7 @@
 import styles from "../../pages/Login.module.scss";
 import reset from "./ResetPassword.module.scss";
 
-const ResetPassword = () => {
+const ResetPassword = (): React.ReactElement => {
     return (
         <div className={reset.modal__container} id="modalContainer">
             <div className={reset.modal}>
